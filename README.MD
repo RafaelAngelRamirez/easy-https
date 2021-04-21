@@ -12,13 +12,35 @@ Funcionan para crear un servidor de desarrollo en express, o angular. Esto no es
 
 Agrega una excepción para cargar el certificado.
 
+``` typescript 
+if (process.env.NODE_ENV === "production") {
+    app.listen(process.env.PORT, ...)
+  } else {
+    // Https en local  
+    https
+      .createServer(
+        {
+          key: fs.readFileSync(
+            "./node_modules/@codice-progressio/easy-https/cert/desarrollo.key"
+          ),
+          cert: fs.readFileSync(
+            "./node_modules/@codice-progressio/easy-https/cert/desarrollo.crt"
+          ),
+        },
+        app
+      )
+      .listen(process.env.PORT, ...)
+  }
+
+```
+
 ### Angular
 
 Modifica el script de inicio para desarrollo señalando a `desarrollo.key` y `desarrollo.csr`
 
 `package.json` para windows
 
-```
+``` json
 "scripts": {
     "start-local": "ng serve -o
         --ssl true
@@ -36,7 +58,8 @@ Instala `ca.pem` en la pestaña de autoridades de certificadoras de confianza de
 Actualmente el certificado trabaja con las siguientes ip:
 
 - https://127.0.0.1
-- https://192.168.1.149
+- https://192.168.1.170
+- https://192.168.1.52
 
 # Disclaimer
 
