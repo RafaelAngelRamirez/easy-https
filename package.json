@@ -15,6 +15,14 @@
     "https": "^1.0.0",
     "nodemon": "^2.0.4"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelAngelRamirez/easy-https.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RafaelAngelRamirez/easy-https/issues"
+  },
+  "homepage": "https://github.com/RafaelAngelRamirez/easy-https#readme",
   "publishConfig": {
     "access": "public"
   }
