@@ -16,6 +16,17 @@ Agrega una excepción para cargar el certificado.
 
 Modifica el script de inicio para desarrollo señalando a `desarrollo.key` y `desarrollo.csr`
 
+`package.json` para windows
+
+```
+"scripts": {
+    "start-local": "ng serve -o
+        --ssl true
+        --ssl-key .\\node_modules\\@codice-progressio\\easy-https\\cert\\desarrollo.key
+        --ssl-cert .\\node_modules\\@codice-progressio\\easy-https\\cert\\desarrollo.crt",
+}
+```
+
 ### Ajuste a tu navegador
 
 Instala `ca.pem` en la pestaña de autoridades de certificadoras de confianza de tu navegador o sistema operativo para que los certificados sean validos.
