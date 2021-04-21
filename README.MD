@@ -6,7 +6,7 @@ Funcionan para crear un servidor de desarrollo en express, o angular. Esto no es
 
 ### Instalación
 
-`npm i @codice-progressio/easy-https`
+`npm i @codice-progressio/easy-https --save-dev`
 
 ### Express
 
